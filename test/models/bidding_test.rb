@@ -6,8 +6,8 @@ class BiddingTest < ActiveSupport::TestCase
     no_bidder = Bidding.new(product: products(:new_inyector))
     bid = Bidding.new(bidder: users(:seb), product: products(:new_inyector))
 
-    assert_equal no_product.valid?, false
-    assert_equal no_bidder.valid?, false
-    assert_equal bid.valid?, true
+    assert_not no_product.save
+    assert_not no_bidder.save
+    assert bid.save
   end
 end

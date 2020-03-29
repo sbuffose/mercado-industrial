@@ -19,12 +19,14 @@ class UserTest < ActiveSupport::TestCase
     no_password = User.new(first_name: "john", phone_number: "549111111111", email: "john.lennon@gmail.com", last_name: "lennon")
     users = [no_phone, no_first_name, no_last_name, no_email, no_password]
 
-    assert_equal users.any? { |user| user.valid? }, false
+    users.each do |user|
+      assert_not user.save
+    end
   end
 
   test "returns valid when email, first_name, last_name, phone_number and password are not provided" do
     user = User.new(email: "john.lennon@gmail.com", first_name: "john", last_name: "lennon", phone_number: "5491111111", password: 123456)
 
-    assert_equal user.valid?, true
+    assert user.save
   end
 end
