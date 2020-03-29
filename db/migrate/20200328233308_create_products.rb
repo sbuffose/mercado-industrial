@@ -12,7 +12,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer :condition, null: false, index: true
       t.integer :age, null: false
       t.boolean :pick_up, null: false, default: true
-      t.bigint :buyer_id, foreign_key: true
       t.references :user, foreign_key: true
       t.string :phone_number, null: false
       t.string :email, null: false

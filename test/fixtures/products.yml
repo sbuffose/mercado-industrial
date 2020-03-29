@@ -1,0 +1,37 @@
+new_inyector:
+  title: "Maquina Inyectora De Plastico Battenfeld 200tn"
+  description: "Descripción - MARCA BATTENFELD - TN CIERRE: 200 TN AUTOMÁTICA PLC - MOLDE MININO Y MAXIMO: 200-500 mm - INYECCIÓN CON NITRÓGENO - PLATOS: 690 X 690 - PASAJE ENTRE COLUMNAS: 480 X 480 - ARO CENTRADOR 160 mm - AÑO: 1995"
+  status: 0
+  target: 0
+  price: 1_650_000
+  address: "General San Martín, Buenos Aires"
+  industry: maquinaria
+  expires_at: "2020/03/21"
+  condition: 1
+  age: 5
+  pick_up: true
+  user_id: fede
+  phone_number: "5491144002480"
+  email: "fhholste@hotmail.com"
+  city: "Buenos Aires"
+  comment:
+  currency: 0
+
+old_inyector:
+  title: "Inyectora Vieja"
+  description: "Descripción - MARCA BATTENFELD - TN CIERRE: 200 TN AUTOMÁTICA PLC - MOLDE MININO Y MAXIMO: 200-500 mm - INYECCIÓN CON NITRÓGENO - PLATOS: 690 X 690 - PASAJE ENTRE COLUMNAS: 480 X 480 - ARO CENTRADOR 160 mm - AÑO: 1995"
+  status: 1
+  target: 0
+  price: 1_000_000
+  address: "General San Martín, Buenos Aires"
+  industry: maquinaria
+  expires_at: "2020/03/21"
+  condition: 3
+  age: 10
+  pick_up: true
+  user_id: fede
+  phone_number: "5491144002480"
+  email: "fhholste@hotmail.com"
+  city: "Buenos Aires"
+  comment:
+  currency: 0

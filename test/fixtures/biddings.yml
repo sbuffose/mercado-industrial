@@ -1,0 +1,29 @@
+one:
+  product: new_inyector
+  bidder: seb
+  status: 0
+
+two:
+  product: new_inyector
+  bidder: ale
+  status: 2
+
+three:
+  product: new_inyector
+  bidder: german
+  status: 3
+
+four:
+  product: old_inyector
+  bidder: seb
+  status: 1
+
+five:
+  product: old_inyector
+  bidder: ale
+  status: 2
+
+six:
+  product: old_inyector
+  bidder: german
+  status: 3
