@@ -12,4 +12,8 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  def full_name
+    "#{first_name.capitalize} #{last_name.capitalize}".strip
+  end
 end
