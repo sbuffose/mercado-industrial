@@ -16,7 +16,7 @@ class UserTest < ActiveSupport::TestCase
     no_first_name = User.new(email: "john.lennon@gmail.com", phone_number: "549111111111", last_name: "lennon", password: 123456)
     no_last_name = User.new(email: "john.lennon@gmail.com", phone_number: "549111111111", first_name: "john", password: 123456)
     no_email = User.new(first_name: "john", phone_number: "549111111111", last_name: "lennon", password: 123456)
-    no_password = User.new(first_name: "john", phone_number: "549111111111", first_name: "john", last_name: "lennon")
+    no_password = User.new(first_name: "john", phone_number: "549111111111", email: "john.lennon@gmail.com", last_name: "lennon")
     users = [no_phone, no_first_name, no_last_name, no_email, no_password]
 
     assert_equal users.any? { |user| user.valid? }, false
