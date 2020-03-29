@@ -14,6 +14,6 @@ class UsersTest < ApplicationSystemTestCase
 
     click_on "Sign up"
 
-    assert_equal User.count, count
+    assert_equal User.count, count + 1
   end
 end
