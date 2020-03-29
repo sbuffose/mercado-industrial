@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   def full_name
+    return email if first_name.nil? && last_name.nil?
+
     "#{first_name.capitalize} #{last_name.capitalize}".strip
   end
 end
