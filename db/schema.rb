@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_03_29_024756) do
   create_table "biddings", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "product_id"
-    t.integer "status", null: false
+    t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_biddings_on_product_id"
@@ -35,21 +35,21 @@ ActiveRecord::Schema.define(version: 2020_03_29_024756) do
   create_table "products", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
-    t.integer "status", null: false
-    t.integer "target", null: false
+    t.integer "status", default: 0, null: false
+    t.integer "target", default: 0, null: false
     t.string "price", default: "0", null: false
     t.string "address", null: false
     t.bigint "industry_id"
     t.date "expires_at", null: false
-    t.integer "condition", null: false
-    t.integer "age", null: false
+    t.integer "condition", default: 0, null: false
     t.boolean "pick_up", default: true, null: false
     t.bigint "user_id"
     t.string "phone_number", null: false
     t.string "email", null: false
     t.string "city"
+    t.integer "age"
     t.string "comment"
-    t.integer "currency", null: false
+    t.integer "currency", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["condition"], name: "index_products_on_condition"

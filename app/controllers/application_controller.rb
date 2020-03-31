@@ -5,8 +5,15 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:phone_number, :first_name, :last_name, :dni])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:phone_number, :first_name, :last_name, :dni])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:phone_number, :first_name, :last_name, :dni, :password, :password_confirmation])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:phone_number, :first_name, :last_name, :dni, :password, :password_confirmation])
   end
 
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || root_path
+  end
+
+  def after_sign_up_path_for(resource)
+    stored_location_for(resource) || root_path
+  end
 end
